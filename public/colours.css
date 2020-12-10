@@ -1,0 +1,85 @@
+/*---- COLOURS ----*/
+
+:root{
+    /*background*/
+    --bg-black: #323330;
+    --bg-grey: #424340;
+    --bg-white: #e6e6e6;
+
+    /*foregroung*/
+    --fg-white: #ffffff;
+    --fg-light: #c4c4c4;
+    --fg-black: #222222;
+    --fg-grey: #4c4c4c;
+    
+    --primary: #81A1C1;
+    --secondary: #81a1c1;
+    
+    /*palette*/
+    --black: #2E3440;
+    --white: #ECEFF4;
+    --red: #BF616A;
+    --cyan: #88C0D0;
+    --blue: #81A1C1;
+    --green: #A3BE8C;
+    --yellow: #EBCB8B;
+    --purple: #B48EAD;
+    --orange: #D08770;
+}
+
+.bg-black{ background-color: var(--black); }
+.bg-white{ background-color: var(--white); }
+.bg-red{ background-color: var(--red); }
+.bg-cyan{ background-color: var(--cyan); }
+.bg-blue{ background-color: var(--blue); }
+.bg-green{ background-color: var(--green); }
+.bg-yellow{ background-color: var(--yellow); }
+.bg-purple{ background-color: var(--purple); }
+.bg-orange{ background-color: var(--orange); }
+
+.font-white{ color: var(--white); }
+.font-black{ color: var(--black); }
+.font-red{ color: var(--red); }
+.font-cyan{ color: var(--cyan); }
+.font-blue{ color: var(--blue); }
+.font-green{ color: var(--green); }
+.font-yellow{ color: var(--yellow); }
+.font-purple{ color: var(--purple); }
+.font-orange{ color: var(--orange); }
+
+.hr-white{ 
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--white);}
+.hr-black{ 
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--black); }
+.hr-red{ 
+    background-color: var(--red);
+    border-color: var(--red);
+    color: var(--red);}
+.hr-cyan{
+    background-color: var(--cyan);
+    border-color: var(--cyan); 
+    color: var(--cyan);}
+.hr-blue{
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: var(--blue);}
+.hr-green{
+    background-color: var(--green);
+    border-color: var(--green);
+    color: var(--green);}
+.hr-yellow{ 
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--yellow);}
+.hr-purple{
+    background-color: var(--purple);
+    border-color: var(--purple);
+    color: var(--purple);}
+.hr-orange{
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: var(--orange);}
