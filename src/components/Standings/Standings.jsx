@@ -41,9 +41,9 @@ const Standings = (props) => {
                                 <td></td>
                                 <td>{team.stats.all.goals.for}</td>
                                 <td>{team.stats.all.goals.against}</td>
-                                <td>{team.stats.goalsDiff}</td>
+                                <td>{team.stats.all.goals.diff}</td>
                                 <td></td>
-                                <td>{team.stats.points}</td>
+                                <td>{team.stats.all.points}</td>
                             </tr>
                         )
                     }
