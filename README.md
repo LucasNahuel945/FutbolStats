@@ -9,6 +9,8 @@ Una pagina que muestra resultados de futbol de la **Copa Libertadores** y la **C
 
 * La página no es responsiva y se probo solamente en google chrome para linux, en otros navegadores o dispositivos puede haber fallas en algunos componentes de la página.
 
+* No configure una página HOME por lo que para acceder a la aplicación se pueden usar los endpoint **/libertadores** o **/champions**
+
 
 ## Check List
 [x] Implementar Consultas a la API.  
