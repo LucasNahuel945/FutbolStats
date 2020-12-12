@@ -1,0 +1,118 @@
+:root{
+
+    --aside-foreground: var(--white);
+    --aside-background: var(--black);
+    --aside-font: 'Roboto Slab', serif;
+    --aside-focused: var(--blue);
+    --aside-menu-bg: var(--black);
+    --aside-submenu-bg: #1E2430;
+    --aside-hover: #383d47;
+    --aside-font: var(--white);
+    --aside-item-fg: var(--white);
+    --aside-subitem-fg: #D8DEE9;
+}
+
+.sidebar{
+    background-color: var(--aside-background);
+    font-family: var(--aside-font);
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 00px;
+    top: 0;
+    padding-top: 70px;
+    width: 300px;
+    height: 100%;
+    transition: 0.2s ease-in-out 0s;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+    .sidebar h1{
+        color: white;
+        margin: 0 auto;
+    }
+    .sidebar .hr{
+        border: 1px solid var(--aside-hover);
+    }
+    .sidebar .menu{
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .sidebar .submenu{
+        position: static;
+    }
+    .sidebar footer{
+        background-color: #3B4252;
+        color: white;
+        bottom: 0;
+        height: 80px;
+        padding: 20px 50px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+.item{
+    color: var(--aside-item-fg);
+    font-weight: 400;
+    line-height: 25px;
+    display: block;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+    .item:hover{
+        background-color: var(--aside-hover);
+        color: var(--aside-focused);
+        font-weight: 500;
+        transition: 0.2s linear;
+    }
+    .item:focus{
+        color: var(--aside-focused);
+        border-left: 3px solid var(--aside-focused);
+        font-weight: 500;
+        transition: 0.2s linear;
+    }
+.subitem{
+    background-color: var(--aside-submenu-bg);
+    color: var(--aside-subitem-font);
+    font-weight: 200;
+    padding-left: 50px;
+    line-height: 20px;
+}
+
+.dropdown-menu{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+    .dropdown-menu::before{
+        content: '\f0d7';
+        right: 20px;
+        position: absolute;
+    }
+
+.side-btn{
+    border-radius: 5px;
+    position: fixed;
+    padding: 10px 15px 10px 15px; 
+    cursor: pointer;
+    left: 20px;
+    top: 20px;
+    transition: 0.2s ease-in-out 0s;
+}
+
+.side-btn-active{
+    left: 320px;
+}
+
+.side-active{
+    left: 0px;
+}
+
+.container-contract{
+    padding-left: 300px;
+}
+

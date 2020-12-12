@@ -1,34 +1,32 @@
 import React, {Fragment} from 'react';
-import MatchsList from '../components/Match/MatchsList';
-import Header from '../components/Header/Header'
+import Scoreboard_lg from '../components/Scoreboards/Scoreboard_lg';
+import MatchesList from '../components/Scoreboards/MatchesList';
+import Header from '../components/Header/Header';
 
 const Rounds = (props) => {
-    const {matchs, league} = props;
+    const {matches, league, rounds} = props;
+
+    var matchesFilteredPerRound = rounds.map(round => 
+        matches.filter(match => 
+            match.league.round === round
+        )
+    );
 
     return(
         <Fragment>
             <Header league={league}/>
-            
-            <p className='round-label'> Octavos de Final</p>
-            <MatchsList matchs={matchs.filter(match => match.league.round === '8th Finals')}/>
-
-            <p className='round-label'> Fase de Grupos - Fecha 6 </p>
-            <MatchsList matchs={matchs.filter(match => match.league.round === 'Group Stage - 6')}/>
-            
-            <p className='round-label'> Fase de Grupos - Fecha 5 </p>
-            <MatchsList matchs={matchs.filter(match => match.league.round === 'Group Stage - 5')}/>
-            
-            <p className='round-label'> Fase de Grupos - Fecha 4 </p>
-            <MatchsList matchs={matchs.filter(match => match.league.round === 'Group Stage - 4')}/>
-            
-            <p className='round-label'> Fase de Grupos - Fecha 3 </p>
-            <MatchsList matchs={matchs.filter(match => match.league.round === 'Group Stage - 3')}/>
-            
-            <p className='round-label'> Fase de Grupos - Fecha 2 </p>
-            <MatchsList matchs={matchs.filter(match => match.league.round === 'Group Stage - 2')}/>
-            
-            <p className='round-label'> Fase de Grupos - Fecha 1 </p>
-            <MatchsList matchs={matchs.filter(match => match.league.round === 'Group Stage - 1')}/>
+            {
+                matchesFilteredPerRound.map( (matches,index) =>
+                    <Fragment> 
+                        <p className='round-label'> {rounds[index]} </p>
+                        <MatchesList 
+                            scoreboards={ 
+                                matches.map(match => <Scoreboard_lg match={match}/>)
+                            }
+                        />
+                    </Fragment>
+                ).reverse()
+            }
         </Fragment>
     )
 }

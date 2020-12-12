@@ -3,7 +3,6 @@ import './Teams.css';
 
 const Teams = (props) => {
     const {teams} = props;
-    console.log(teams);
     
     return(
         <div className='container teams-list'>

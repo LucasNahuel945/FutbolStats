@@ -1,8 +1,9 @@
 import React from 'react';
-import './Match.css';
 import {formatDate} from '../../data/data';
+import './Scoreboard.css';
 
-const Match = (props) =>{
+
+const Scoreboard_sm = (props) =>{
     
     const {home, away} = props.match;
     const date = formatDate(props.match.fixture.date, -3);
@@ -14,7 +15,7 @@ const Match = (props) =>{
                 <div className='date bg-black'>{date.date} </div>
             </div>
 
-            <div className='flex-columns bg-white'>
+            <div className='flex-columns bg-white scoreboard'>
                 <div className='flex-rows expand'>
                     <div className='team-label'>
                         <div> <img className='team-logo' src={home.logo} alt={home.name}/> </div>
@@ -35,4 +36,4 @@ const Match = (props) =>{
     );
 }
 
-export default Match
+export default Scoreboard_sm;

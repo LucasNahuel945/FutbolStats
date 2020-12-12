@@ -8,19 +8,21 @@ import RoundsPage from './views/RoundsPage';
 import StandingsPage from './views/StandingsPage'
 
 // Data
-import { teams, matchs, standings} from './data/data';
+import { teams, matches, standings, rounds} from './data/data';
 
 const leagues = [
     {
         name: 'libertadores',
         teams: teams.libertadores,
-        matchs: matchs.libertadores,
-        standings: standings.libertadores
+        matches: matches.libertadores,
+        standings: standings.libertadores,
+        rounds: rounds.libertadores
     },{
         name: 'champions',
         teams: teams.champions,
-        matchs: matchs.champions,
-        standings: standings.champions
+        matches: matches.champions,
+        standings: standings.champions,
+        rounds: rounds.champions
     }];
 
 const App = () => {
@@ -31,7 +33,7 @@ const App = () => {
             <Router>
                 <Route
                     exact path = {'/'+league.name}
-                    render = {()=> <LeaguePage league={league.name} matchs={league.matchs}/>}
+                    render = {()=> <LeaguePage league={league.name} matches={league.matches}/>}
                 />
                 <Route
                     exact path = {'/'+league.name+'/teams'}
@@ -39,13 +41,12 @@ const App = () => {
                 />
                 <Route
                     exact path = {'/'+league.name+'/instances'}
-                    render = {()=> <RoundsPage  league={league.name} matchs={league.matchs}/>}
+                    render = {()=> <RoundsPage  league={league.name} matches={league.matches} rounds={league.rounds}/>}
                 />
                 <Route
                     exact path = {'/'+league.name+'/standings'}
                     render = {()=> <StandingsPage  league={league.name} standings={league.standings}/>}
                 />
-
             </Router>
         )
     }

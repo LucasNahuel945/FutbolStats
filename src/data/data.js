@@ -1,6 +1,7 @@
-import matchs from  './matchs';
+import matches from  './matches';
 import teams from  './teams';
 import standings from  './standings';
+import rounds from './rounds';
 
 function matchAdapter(match){
   return {
@@ -133,9 +134,9 @@ var standingsAdapter = {
   champions:  standings.champions.map( standing =>standinsAdapter(standing))
 }
 
-var matchsAdapter = {
-  libertadores: matchs.libertadores.map( match => matchAdapter(match) ),
-  champions: matchs.champions.map( match => matchAdapter(match) )
+var matchesAdapter = {
+  libertadores: matches.libertadores.map( match => matchAdapter(match) ),
+  champions: matches.champions.map( match => matchAdapter(match) )
 }
 
 var teamsAdapter = {
@@ -145,7 +146,8 @@ var teamsAdapter = {
 
 export {
   formatDate,
+  rounds,
   teamsAdapter as teams,
-  matchsAdapter as matchs,
+  matchesAdapter as matches,
   standingsAdapter as standings
 }
