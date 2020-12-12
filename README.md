@@ -13,9 +13,9 @@ Una pagina que muestra resultados de futbol de la **Copa Libertadores** y la **C
 
 
 ## Check List
-[x] Implementar Consultas a la API.  
-[x] Implementar Estadísticas de torneos (goleadores, tarjetas,...).  
-[x] Implementar Página de cada equipo.  
-[x] Solucionar botones en selección de competición (en el header).  
-[x] Modificar partidos por instancias, debe muestrar partidos hasta la ultima instancia.  
-[x] Implementar ronda de penales en el marcador (si un partido llega a penales).  
+[-] Implementar Consultas a la API.  
+[-] Implementar Estadísticas de torneos (goleadores, tarjetas,...).  
+[-] Implementar Página de cada equipo.  
+[-] Solucionar botones en selección de competición (en el header).  
+[-] Modificar partidos por instancias, debe muestrar partidos hasta la ultima instancia.  
+[-] Implementar ronda de penales en el marcador (si un partido llega a penales).  
